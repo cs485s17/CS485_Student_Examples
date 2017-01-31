@@ -1,3 +1,11 @@
+//***************************************************************************
+// File name:  main.cpp
+// Author:     Chadd Williams
+// Date:       1/31/2017
+// Class:      CS485
+// Assignment: Constructor Examples
+// Purpose:    Demonstrate how constructors and assignment operator are called
+//***************************************************************************
 
 #include <iostream>
 #include "bigger.h"
@@ -6,7 +14,6 @@ using namespace std;
 
 void foo(bigger b4)
 {
-
 }
 
 bigger bar(bigger b5)

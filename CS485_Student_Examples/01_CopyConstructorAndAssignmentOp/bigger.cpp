@@ -37,7 +37,7 @@ bigger::bigger (int x) :mData (x)
 {
   mID = getID ();
   mData = x;
-  std::cout << "ctor(int)" << mID << "\n";
+  std::cout << "ctor(int) " << mID << "\n";
 }
 
 //***************************************************************************
@@ -54,7 +54,7 @@ bigger::bigger (const bigger& rcData)
 {
   mID = getID ();
   mData = rcData.mData;
-  std::cout << "cctor" << mID << "\n";
+  std::cout << "cctor " << mID << "\n";
 }
 
 //***************************************************************************
@@ -68,7 +68,7 @@ bigger::bigger (const bigger& rcData)
 //***************************************************************************
 bigger::~bigger ()
 {
-  std::cout << "dtor" << mID << "\n";
+  std::cout << "dtor " << mID << "\n";
 }
 
 
@@ -83,7 +83,7 @@ bigger::~bigger ()
 //***************************************************************************
 bigger& bigger::operator=(const bigger& rcData)
 {
-  std::cout << "op=" << mID << "\n";
+  std::cout << "op= " << mID << "\n";
   mData = rcData.mData;
   return *this;
 }

@@ -20,7 +20,7 @@ public:
 
   ~bigger ();
 
-  bigger (const bigger&rcData);
+  bigger (const bigger &rcData);
 
   bigger& operator= (const bigger &rcData);
   

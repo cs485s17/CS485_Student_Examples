@@ -10,27 +10,23 @@
 
 #include <iostream>
 
-
 class bigger
 {
 public:
 
-  bigger() { std::cout << "ctor\n"; }
+  bigger ();
 
-  /*explicit*/ bigger(int x) :mData(x) { std::cout << "ctor(int)\n"; }
+  /*explicit*/ bigger (int x);
 
-  ~bigger() { std::cout << "dtor\n"; }
+  ~bigger ();
 
-  bigger(const bigger&rcData)
-  {
-    std::cout << "cctor\n"; mData = rcData.mData;
-  }
+  bigger (const bigger&rcData);
 
-  bigger& operator=(const bigger&rcData)
-  {
-    std::cout << "op=\n"; mData = rcData.mData; return *this;
-  }
-
+  bigger& operator= (const bigger &rcData);
+  
 private:
   int mData = 0;
+  int mID;
+
+  int getID() const;
 };

@@ -12,43 +12,49 @@
 
 using namespace std;
 
-void foo(bigger b4)
+void foo (bigger b4)
 {
 }
 
-bigger bar(bigger b5)
+bigger bar (bigger b5)
 {
   return b5;
 }
 
-int main()
+int main ()
 {
 
   cout << "b1\n";
   bigger b1;
-  cout << "end b1\n";
+  cout << "end b1\n\n";
 
   cout << "b2\n";
-  bigger b2(b1);
-  cout << "end b2\n";
+  bigger b2 (b1);
+  cout << "end b2\n\n";
 
   cout << "b3\n";
   bigger b3 = b1;
-  cout << "end b3\n";
+  cout << "end b3\n\n";
 
   cout << "b6\n";
   bigger b6;
-  cout << "end b6\n";
+  cout << "end b6\n\n";
 
   cout << "foo\n";
-  foo(b1);
-  cout << "end foo\n";
+  foo (b1);
+  cout << "end foo\n\n";
 
   cout << "bar\n";
-  b6 = bar(b1);
-  cout << "end bar\n";
+  b6 = bar (b1);
+  cout << "end bar\n\n";
 
   cout << "b7\n";
   bigger b7 = 1;
-  cout << "end b7\n";
+  cout << "end b7\n\n";
+
+  cout << "b8\n";
+  foo (1);
+  cout << "end b8\n\n";
+
+  return EXIT_SUCCESS;
 }

@@ -149,6 +149,7 @@
     <ClInclude Include="bigger.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="bigger.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

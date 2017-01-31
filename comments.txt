@@ -1,0 +1,33 @@
+//***************************************************************************
+// File name:  bigger.h
+// Author:     Chadd Williams
+// Date:       1/31/2017
+// Class:      CS485
+// Assignment: Constructor Examples
+// Purpose:    Demonstrate how constructors and assignment op are called
+//***************************************************************************
+
+
+
+
+//***************************************************************************
+// Constructor: Rational
+//
+// Description: Initializes data members to default values
+//
+// Parameters:  numerator – the numerator of the rational number
+//              denominator – the denominator of the rational number
+//
+// Returned:    None
+//***************************************************************************
+
+
+//***************************************************************************
+// Function:    setNumerator
+//
+// Description: Changes the value of the numerator to the value input.
+//
+// Parameters:  numerator   - numerator of the rational number
+//
+// Returned:    None
+//***************************************************************************

@@ -12,15 +12,43 @@
 
 using namespace std;
 
+//***************************************************************************
+// Function:    foo
+//
+// Description: Demonstrate pass by value
+//
+// Parameters:  b4 - the object passed in by value
+//
+// Returned:    None
+//***************************************************************************
 void foo (bigger b4)
 {
 }
 
+//***************************************************************************
+// Function:    bar
+//
+// Description: Demonstrate pass by value and return by value
+//
+// Parameters:  b5 - the object passed in by value
+//
+// Returned:    bigger - a copy of the parameter
+//***************************************************************************
 bigger bar (bigger b5)
 {
   return b5;
 }
 
+//***************************************************************************
+// Function:    main
+//
+// Description: Demonstrate how constructors, destructors, and operator=
+//              are invoked.
+//
+// Parameters:  None
+//
+// Returned:    int - EXIT_SUCCESS
+//***************************************************************************
 int main ()
 {
 

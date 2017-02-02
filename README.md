@@ -4,7 +4,8 @@
 
 * Create an empty Git repository on GitHub.  Do not add a README or license at this point!
 ```
-https://github.com/cs485s17/GitHubExample.git
+
+https://github.com/cs485s17/CS485_Student_Examples.git
 ```
 
 * Create a new, empty directory to contain the VS Solution and local Git Repos:
@@ -62,7 +63,7 @@ Team Explorer
 Sync
 Publish to Remote Repository
 Get Started
-https://github.com/cs485s17/GitHubExample.git   <-- the SSH address does not work, only https://
+https://github.com/cs485s17/CS485_Student_Examples.git   <-- the SSH address does not work, only https://
 Publish
 ```
 

@@ -26,6 +26,7 @@
       * Push changes from instructor to your personal repository
       * Use the arrow/publish icon in the bottom right.
       * Outgoint Commits | Push
+* You can always use the command line as outline in the Workflow below.
   
 
 ## GitHub Workflow Example ##

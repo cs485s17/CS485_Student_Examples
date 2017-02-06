@@ -13,6 +13,9 @@
     * Name: upstream
     * Fetch: https://github.com/cs485s17/CS485_Student_Examples.git
     * Save
+  * Team Explorer | Projects | Manage Connections 
+    * Double click the correct Git Repository
+    * Open the Solution.
   * You can Push to your personal repository to save your work
   * You can Fetch from the upstream repository to get the instructor's updates.
     * Team Explorer | Synchronization | Fetch (at the very top, press the arrow down) | Choose upstream

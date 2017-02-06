@@ -1,5 +1,9 @@
 # CS485_Student_Examples
 
+## GitHub Workflow Example ##
+
+[First GitHub Practice](https://github.com/chaddcw/FirstGitPractice) from CS 360
+
 ## Connect a Visual Studio solution to an empty GitHub Repository
 
 * Create an empty Git repository on GitHub.  Do not add a README or license at this point!

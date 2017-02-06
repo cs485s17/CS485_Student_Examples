@@ -19,6 +19,13 @@
   * You can Push to your personal repository to save your work
   * You can Fetch from the upstream repository to get the instructor's updates.
     * Team Explorer | Synchronization | Fetch (at the very top, press the arrow down) | Choose upstream
+    * Team Explorer | Branches | Merge |
+      * Merge from branch: upstream/master
+      * Into current branch: master
+      * Merge
+      * Push changes from instructor to your personal repository
+      * Use the arrow/publish icon in the bottom right.
+      * Outgoint Commits | Push
   
 
 ## GitHub Workflow Example ##

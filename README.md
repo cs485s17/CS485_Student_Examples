@@ -1,5 +1,23 @@
 # CS485_Student_Examples
 
+## How CS 485 Students should use this repository ##
+
+* Fork this repository to your personal user account - this creates a **public** repository on your account.
+* Clone this repository into Visual Studio. 
+  * Open Visual Studio. Do not open a Project or Solution.
+  * Team Explorer | Connect | Clone
+  * URL: https://github.com/USERNAME/CS485_Student_Examples.git
+  * Clone
+  * Team Explorer | Repository Settings
+  * Remotes | Add
+    * Name: upstream
+    * Fetch: https://github.com/cs485s17/CS485_Student_Examples.git
+    * Save
+  * You can Push to your personal repository to save your work
+  * You can Fetch from the upstream repository to get the instructor's updates.
+    * Team Explorer | Synchronization | Fetch (at the very top, press the arrow down) | Choose upstream
+  
+
 ## GitHub Workflow Example ##
 
 [First GitHub Practice](https://github.com/chaddcw/FirstGitPractice) from CS 360

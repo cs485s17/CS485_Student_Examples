@@ -26,11 +26,11 @@ int main ()
 
   PacString s3;
 
-  s3 = s1 + s2;
+ // s3 = s1 + s2;
 
   std::cout << "s3: " << s3 << std::endl;
 
-  s3 += (s3 + "!!");
+//  s3 += (s3 + "!!");
 
   std::cout << "s3: " << s3 << std::endl;
 
@@ -50,5 +50,3 @@ int main ()
 
   return EXIT_SUCCESS;
 }
-
-

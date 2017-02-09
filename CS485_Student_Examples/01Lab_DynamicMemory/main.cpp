@@ -21,10 +21,10 @@ int main ()
 
   std::cout << "s1:" << s1 << std::endl;
 
-  PacString s2 ("World");
+  PacString s2 ("World");//done
   std::cout << "s2: " << s2 << std::endl;
 
-  PacString s3;
+  PacString s3;//done
 
   s3 = s1 + s2;
 
@@ -37,7 +37,7 @@ int main ()
 
 
   // TODO:
-  PacString *pcDynString;
+  //PacString *pcDynString;
 
   // dynamically allocate the PacString object using
   // pcDynString.

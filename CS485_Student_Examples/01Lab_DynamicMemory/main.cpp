@@ -19,18 +19,18 @@ int main ()
 
   PacString s1 = "Hello!";
 
-  std::cout << "s1:" << s1 << std::endl;
+  std::cout << "s1: " << s1 << std::endl;
 
   PacString s2 ("World");
   std::cout << "s2: " << s2 << std::endl;
 
   PacString s3;
 
- // s3 = s1 + s2;
+	s3 = s1 + s2;
 
   std::cout << "s3: " << s3 << std::endl;
 
-//  s3 += (s3 + "!!");
+	s3 += (s3 + "!!");
 
   std::cout << "s3: " << s3 << std::endl;
 

@@ -23,7 +23,7 @@ PacString::PacString(const char *pszString)
 	{
 		this->mpszData [i] = pszString [i];
 	}
-	this->mpszData[length] = NULL;
+	this->mpszData[length - 1] = NULL;
 }
 
 PacString::PacString(const PacString &rcData)
@@ -37,7 +37,7 @@ PacString::PacString(const PacString &rcData)
 	{
 		this->mpszData [i] = rcData.mpszData [i];
 	}
-	this->mpszData[length] = NULL;
+	this->mpszData[length - 1] = NULL;
 }
 
 PacString::~PacString()
@@ -54,16 +54,13 @@ PacString& PacString::operator=(PacString rcData)
 
 	swap (this->mpszData, rcData.mpszData);
 
-	this->mpszData[length] = NULL;
+	this->mpszData[length - 1] = NULL;
 	return *this;
 }
 
 ostream& operator<< (std::ostream &out, const PacString &rcData)
 {
-	for (int i = 0; NULL != rcData.mpszData [i]; i++)
-	{
-		out << rcData.mpszData [i];
-	}
+	out << rcData.mpszData;
 
 	return out;
 }
@@ -93,7 +90,7 @@ PacString& PacString::operator+=(const PacString &rcData)
 		this->mpszData[i] = pszNewData[i];
 	}
 
-	this->mpszData[newLength] = NULL;
+	mpszData [newLength - 1] = NULL;
 
 	delete [] pszNewData;
 
@@ -102,47 +99,9 @@ PacString& PacString::operator+=(const PacString &rcData)
 
 PacString PacString::operator+(const PacString &rcData) const
 {
-	/*int thisLength = static_cast <int> (strlen(this->mpszData));
-	int dataLength = static_cast <int> (strlen(rcData.mpszData));
-	int newLength = thisLength + dataLength + 1;
-	PacString cNewData;
-	cNewData.mpszData = new char[newLength];
+	PacString cTemp = mpszData;
+	
+	cTemp += rcData.mpszData;
 
-	for (int i = 0; i < thisLength; i++)
-	{
-		cNewData.mpszData[i] = this->mpszData[i];
-	}
-
-	for (int j = 0; j < dataLength; j++)
-	{
-		cNewData.mpszData [j + thisLength] = rcData.mpszData [j];
-	}
-
-	cNewData.mpszData[newLength] = NULL;
-
-	return cNewData;*/
-	string s, s2;
-	stringstream ss;
-	PacString cNewData;
-
-	char *temp = new char;
-
-	strcpy_s(temp, strlen(mpszData + 1) * sizeof(char), mpszData);
-	strcpy_s(temp + strlen(mpszData), (strlen(rcData.mpszData) + 1) * sizeof(char), rcData.mpszData);
-
-
-/*
-	ss << mpszData;
-	ss >> s;
-	ss.clear();
-	ss << rcData.mpszData;
-	ss >> s2;
-
-	s += s2;
-
-	ss << s2;
-
-	ss >> cNewData.mpszData;*/
-
-	return temp;
+	return cTemp;
 }

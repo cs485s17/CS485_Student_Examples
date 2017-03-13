@@ -26,7 +26,8 @@ CS485Exception::CS485Exception (int value) :mValue(value)
 
   mpszMessage = new char[errMessage.size () + 1];
 
-  strncpy_s (mpszMessage, errMessage.size () + 1, errMessage.c_str (), errMessage.size () + 1);
+  strncpy_s (mpszMessage, errMessage.size () + 1, errMessage.c_str (), 
+    errMessage.size () + 1);
 }
 
 //***************************************************************************

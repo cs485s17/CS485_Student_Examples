@@ -10,6 +10,13 @@
 #include <iostream>
 #include "CS485Exception.h"
 #include <exception>
+#include <memory>
+
+// throw() specification
+// depreciated in C++11
+void foo () throw();
+void bar () throw(CS485Exception);
+void rab () throw(...);
 
 
 //***************************************************************************
@@ -34,6 +41,58 @@ unsigned int *riskyException (int param) noexcept(false)
   }
 
   *pRetVal = param;
+
+  return pRetVal;
+}
+
+void mightThrowExceptionSmart (std::shared_ptr<unsigned int> p) noexcept(false)
+{
+
+}
+
+void mightThrowException (unsigned int *pValue) noexcept(false)
+{
+
+}
+
+//***************************************************************************
+// Function:    unknownException
+//
+// Description: Demonstrate the risks of calling code that might throw
+//              an exception
+//
+// Parameters:  param - int to store in the new unsigned int
+//
+// Returned:    pointer to a new unsigned int
+//***************************************************************************
+unsigned int *unknownException (int param) noexcept(false)
+{
+  CS485Exception cException;
+
+  unsigned int *pRetVal = new unsigned int;
+
+  mightThrowException (pRetVal);
+
+  return pRetVal;
+}
+
+//***************************************************************************
+// Function:    safeUnknownException
+//
+// Description: Demonstrate how to mitigate the risks of calling code that 
+//              might throw an exception by using smart_pointers
+//
+// Parameters:  param - int to store in the new unsigned int
+//
+// Returned:    pointer to a new unsigned int
+//***************************************************************************
+std::shared_ptr<unsigned int> safeUnknownException (int param) noexcept(false)
+{
+  CS485Exception cException;
+
+  auto pRetVal (std::make_shared<unsigned int> ());
+
+  mightThrowExceptionSmart (pRetVal);
 
   return pRetVal;
 }
@@ -64,6 +123,10 @@ int main ()
   catch (const std::bad_alloc& e)
   {
     std::cout << e.what () << std::endl;
+  }
+  catch (...)
+  {
+    std::cout << "Unknown exception" << std::endl;
   }
 
   try

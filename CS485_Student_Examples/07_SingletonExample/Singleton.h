@@ -15,16 +15,12 @@ public:
 
   // More Effective C++: S. Meyers. (modified)
 
-  static Singleton& Instance ()
-  {
-    static Singleton theSingleton;
-    return theSingleton;
-  }
+  static Singleton& Instance ();
 
   // non-static public methods
   void incrCount ();
 
-  friend std::ostream& operator<<(std::ostream &rcOut, 
+  friend std::ostream& operator<<(std::ostream &rcOut,
     const Singleton &rcData);
 
 private:
@@ -35,7 +31,7 @@ private:
 
   Singleton& operator=(Singleton const&) = delete;  // assign op is hidden
 
-  // private data members
+                                                    // private data members
   int mCounter = 0;
 
 };

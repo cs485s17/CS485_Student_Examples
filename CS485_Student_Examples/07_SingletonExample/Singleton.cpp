@@ -24,6 +24,21 @@ Singleton::Singleton ()
 }
 
 //***************************************************************************
+// Function:    Instance
+//
+// Description: static method to retreive a reference to a Singleton
+//
+// Parameters:  None
+//
+// Returned:    reference to a static Singleton
+//***************************************************************************
+Singleton& Singleton::Instance ()
+{
+  static Singleton theSingleton;
+  return theSingleton;
+}
+
+//***************************************************************************
 // Destructor:  Singleton
 //
 // Description: Destroy the Singleton, just print a message indicating

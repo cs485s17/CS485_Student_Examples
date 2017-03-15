@@ -32,7 +32,7 @@ void rab () throw(...);
 //int cantThrowException (char data) noexcept;
 unsigned int *riskyException (int param) noexcept(false)
 {
-  CS485Exception cException;
+  CS485Exception cException = CS485Exception(204);
 
   unsigned int *pRetVal = new unsigned int;
 

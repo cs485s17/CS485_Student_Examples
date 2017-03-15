@@ -11,6 +11,7 @@
 #include "CS485Exception.h"
 #include <exception>
 #include <memory>
+//#include "vld.h"
 
 // throw() specification
 // depreciated in C++11
@@ -45,14 +46,15 @@ unsigned int *riskyException (int param) noexcept(false)
   return pRetVal;
 }
 
-void mightThrowExceptionSmart (std::shared_ptr<unsigned int> p) noexcept(false)
+void mightThrowExceptionSmart (std::shared_ptr<unsigned int> p) 
+  noexcept(false)
 {
-
+  throw CS485Exception(51);
 }
 
 void mightThrowException (unsigned int *pValue) noexcept(false)
 {
-
+  throw CS485Exception (56);
 }
 
 //***************************************************************************
@@ -165,6 +167,23 @@ int main ()
     std::cout << e.what () << std::endl;
   }
 
+  try
+  {
+    pUInt = unknownException (-11);
+  }
+  catch (const std::exception &e)
+  {
+    std::cout << e.what () << std::endl;
+  }
+
+  try
+  {
+    auto pSafeReturn = safeUnknownException(-12);
+  }
+  catch (const std::exception &e)
+  {
+    std::cout << e.what () << std::endl;
+  }
   //throw CS485Exception (0);
 
   return EXIT_SUCCESS;

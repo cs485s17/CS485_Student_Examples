@@ -155,8 +155,8 @@ void vectorOfPointers (int startKey, int numberItems)
   std::cout << "----------------------" << std::endl;
 
   // walk the vector and display each item using for_each
-  std::for_each (cVectorOfPtrs.begin (), 
-    cVectorOfPtrs.end (),
+  std::for_each (cVectorOfPtrs.cbegin (), 
+    cVectorOfPtrs.cend (),
     [](auto cExCl) 
   {
     std::cout << "FOR_EACH: " << *cExCl << std::endl; 
@@ -168,8 +168,8 @@ void vectorOfPointers (int startKey, int numberItems)
   // walk the vector and display each item using a reverse iterator
   // delete each item during the walk.
   std::cout << "REVERSE" << std::endl;
-  for (auto it = cVectorOfPtrs.rbegin ();
-    it != cVectorOfPtrs.rend (); ++it)
+  for (auto it = cVectorOfPtrs.crbegin ();
+    it != cVectorOfPtrs.crend (); ++it)
   {
     std::cout << **it << std::endl;
     delete *it;
@@ -214,16 +214,16 @@ void vectorOfObjects (int startKey, int numberItems)
 
   std::cout << cVector.size () << std::endl;
   std::cout << "----------------------" << std::endl;
-  for (std::vector<ExampleClass>::iterator it = cVector.begin ();
-    it != cVector.end (); ++it)
+  for (std::vector<ExampleClass>::const_iterator it = cVector.cbegin ();
+    it != cVector.cend (); ++it)
   {
     std::cout << *it << std::endl;
   }
 
   std::cout << cVector.size () << std::endl;
   std::cout << "----------------------" << std::endl;
-  for (auto it = cVector.begin ();
-    it != cVector.end (); ++it)
+  for (auto it = cVector.cbegin ();
+    it != cVector.cend (); ++it)
   {
     std::cout << *it << std::endl;
   }
@@ -259,8 +259,8 @@ void mapOfObjects (int startKey, int numberItems)
     cTheMap.insert (std::make_pair (i, ExampleClass (i, std::to_string (i))));
   }
 
-  for (auto it = cTheMap.begin ();
-    it != cTheMap.end (); ++it)
+  for (auto it = cTheMap.cbegin ();
+    it != cTheMap.cend (); ++it)
   {
     std::cout << it->first << " " << it->second << std::endl;
   }
@@ -274,8 +274,8 @@ void mapOfObjects (int startKey, int numberItems)
 
   }
 
-  for (auto it = cTheMapDescending.begin ();
-    it != cTheMapDescending.end (); ++it)
+  for (auto it = cTheMapDescending.cbegin ();
+    it != cTheMapDescending.cend (); ++it)
   {
     std::cout << it->first << " " << it->second << std::endl;
   }
@@ -310,8 +310,8 @@ void sortedMapOfObjects (int startKey, int numberItems)
   }
   std::cout << "----------------------" << std::endl;
 
-  for (auto it = cTheMapStringsDescending.begin ();
-    it != cTheMapStringsDescending.end (); ++it)
+  for (auto it = cTheMapStringsDescending.cbegin ();
+    it != cTheMapStringsDescending.cend (); ++it)
   {
     std::cout << it->first << " " << it->second << std::endl;
   }
@@ -327,8 +327,8 @@ void sortedMapOfObjects (int startKey, int numberItems)
   }
   std::cout << "----------------------" << std::endl;
 
-  for (auto it = cTheMapStringsCompareStruct.begin ();
-    it != cTheMapStringsCompareStruct.end (); ++it)
+  for (auto it = cTheMapStringsCompareStruct.cbegin ();
+    it != cTheMapStringsCompareStruct.cend (); ++it)
   {
     std::cout << it->first << " " << it->second << std::endl;
   }
@@ -348,8 +348,8 @@ void sortedMapOfObjects (int startKey, int numberItems)
   }
   std::cout << "----------------------" << std::endl;
 
-  for (auto it = cTheMapStringsCompareLambda.begin ();
-    it != cTheMapStringsCompareLambda.end (); ++it)
+  for (auto it = cTheMapStringsCompareLambda.cbegin ();
+    it != cTheMapStringsCompareLambda.cend (); ++it)
   {
     std::cout << it->first << " " << it->second << std::endl;
   }
@@ -383,8 +383,8 @@ void unorderedMapOfObjects (int startKey, int numberItems)
 
   }
 
-  for (auto it = cTheHashMap.begin ();
-    it != cTheHashMap.end (); ++it)
+  for (auto it = cTheHashMap.cbegin ();
+    it != cTheHashMap.cend (); ++it)
   {
     std::cout << it->first << " " << it->second << std::endl;
   }
@@ -404,8 +404,8 @@ void unorderedMapOfObjects (int startKey, int numberItems)
 
   }
 
-  for (auto it = cTheHashMapHashGiven.begin ();
-    it != cTheHashMapHashGiven.end (); ++it)
+  for (auto it = cTheHashMapHashGiven.cbegin ();
+    it != cTheHashMapHashGiven.cend (); ++it)
   {
     std::cout << it->first << " " << it->second << " HASH: " <<
       hashFunc(it->first) <<std::endl;
@@ -426,8 +426,13 @@ void unorderedMapOfObjects (int startKey, int numberItems)
 int main ()
 {
   
+  auto value = sumThem (1, 2);
+
+  std::cout << value << std::endl;
+
   std::cout << sumThem (1, 2) << std::endl;
   std::cout << sumThem (1.1, 2.2) << std::endl;
+  //std::cout << sumThem (1.1, 2) << std::endl; // type mismatch
   //std::cout << sumThem ('a', 1) << std::endl; // type mismatch
   //std::cout << sumThem ("test", "test") << std::endl; // const char * 
   std::cout << sumThem (std::string ("CS"), std::string ("485")) << std::endl;

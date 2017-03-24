@@ -35,9 +35,9 @@ int main ()
   GiveBonusVisitor cGiveBonusVisitor;
   SalarySumVisitor cSalarySumVisitor;
 
-  cTheContainer.addEmployee (new Worker ("Bob", "Bib", 1000000));
+  cTheContainer.addEmployee (new Worker ("Bob", "Bib", 1000001));
   cTheContainer.addEmployee (new Worker ("Sally", "Silly", 1500000));
-  cTheContainer.addEmployee (new Manager ("Jim", "Jam", 2500000));
+  cTheContainer.addEmployee (new Manager ("Jim", "Jam", 2500003));
   cTheContainer.addEmployee (new Manager ("Mable", "Table", 3500000));
 
   std::cout << std::endl;

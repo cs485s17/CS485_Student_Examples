@@ -18,9 +18,15 @@
     <ClInclude Include="PacString.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="mem_debug.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PacString.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

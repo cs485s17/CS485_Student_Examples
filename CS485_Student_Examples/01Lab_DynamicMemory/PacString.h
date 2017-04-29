@@ -21,7 +21,7 @@ public:
 
   // write both operator=, but only compile
   // one at a time.
-  // PacString& operator=(const PacString &rcData);
+  //PacString& operator=(const PacString &rcData);
 
   PacString& operator=(PacString rcData);
 
@@ -29,7 +29,7 @@ public:
 
   // Bonus
   PacString& operator+=(const PacString &rcData);
-  PacString operator+(const PacString &rcData) const;
+  //PacString operator+(const PacString &rcData) const;
 
 private:
   char *mpszData = nullptr;

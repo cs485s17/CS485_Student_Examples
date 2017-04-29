@@ -17,10 +17,12 @@ int main ()
 {
 //  _CrtSetDbgFlag (_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 
-  PacString s1 = "Hello!";
+	PacString s1;
+	s1= "Hello!";
 
   std::cout << "s1:" << s1 << std::endl;
 
+  /*
   PacString s2 ("World");
   std::cout << "s2: " << s2 << std::endl;
 
@@ -34,7 +36,7 @@ int main ()
 
   std::cout << "s3: " << s3 << std::endl;
 
-
+  // */
 
   // TODO:
   PacString *pcDynString;

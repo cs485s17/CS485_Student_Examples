@@ -14,7 +14,7 @@
 #include "SimpleContainer.h"
 #include "SalarySumVisitor.h"
 
-#include "vld.h"
+//#include "vld.h"
 
 //***************************************************************************
 // Function:    main

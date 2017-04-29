@@ -12,7 +12,7 @@
 #include "DoubleBonusGiver.h"
 #include <iostream>
 
-#include "vld.h"
+//#include "vld.h"
 
 //***************************************************************************
 // Function:    main

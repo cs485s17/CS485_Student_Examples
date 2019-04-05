@@ -1,3 +1,8 @@
+
+## This repository is no longer maintained. ##
+An updated repository is here:
+https://github.com/chaddcw/CS485_Student_Examples
+
 # CS485_Student_Examples
 
 ## How can a student keep their own personal fork in sync with this repository ##
